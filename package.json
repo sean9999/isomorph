@@ -1,0 +1,28 @@
+{
+  "name": "@sean9999/isomorph",
+  "version": "1.0.0",
+  "description": "helping you write isomorphic javascript",
+  "main": "index.js",
+  "dependencies": {
+    "parseuri": "^0.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sean9999/isomorph.git"
+  },
+  "keywords": [
+    "isomorphic",
+    "server",
+    "client"
+  ],
+  "author": "Sean Macdonald <sean@crazyhorsecoding.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sean9999/isomorph/issues"
+  },
+  "homepage": "https://github.com/sean9999/isomorph#readme"
+}

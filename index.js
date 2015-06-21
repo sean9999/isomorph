@@ -1,27 +1,26 @@
 var isomorph = (function(undefined){
 	/**
 	* Isomorph is designed to allow the same code to be used on the server as in the browser.
-	* It returns an object meant for glomming onto the global object or injecting into an IIFE
+	* It returns an object meant for glomming onto the global object.
+	* It supports only modern browsers and runtimes.
 	* @TODO: add requirejs support
 	* @TODO: add ES6 support
 	**/
+
 	var r = {
-		globe: null,
-		dom: null,
-		isNode: null,
-		isBrowser: null,
-		isNodeWebkit: null,
-		isOn: null,
-		module: null,
-		microtime: null
+		isNode: null,	//	true or false
+		isBrowser: null,	//	true or false
+		isOn: null,	//	browser or server
+		microtime: null // a very accurate timestamp
 	};
+
+
 	r.isNode = (typeof process !== "undefined" && {}.toString.call(process) === "[object process]" && typeof require !== "undefined" && typeof module !== "undefined" && typeof module.exports !== "undefined");
 	r.isBrowser = (typeof window !== "undefined" && typeof window.document !== "undefined");
 	if (r.isNode) {
 		var little_now = process.hrtime();
 		var big_now = Date.now();
-		r.globe = global;
-		r.dom = require('html-document');
+		require('./window/document'); // creates global.document
 		r.isOn = 'server';
 		r.publish = module.exports;
 		r.microtime = function(){
