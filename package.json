@@ -1,6 +1,6 @@
 {
   "name": "@sean9999/isomorph",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "helping you write isomorphic javascript",
   "main": "index.js",
   "dependencies": {
